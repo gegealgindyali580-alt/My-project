@@ -1,0 +1,8 @@
+:root{
+--primary:#142D4E;--secondary:#167C80;--accent:#D5AD59;
+--background:#FAFBFC;--surface:#FFFFFF;--surface-muted:#F1F3F6;--border:#DDE2E8;
+--text:#1B2B40;--text-muted:#64748B;--success:#2E9E6B;--warning:#D98E04;--danger:#C8453B;
+--radius-card:12px;--transition-fast:200ms ease-out;--transition-normal:300ms ease-out;
+--font-heading:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;
+--font-body:"Tajawal","Segoe UI",Tahoma,Arial,sans-serif;
+}
