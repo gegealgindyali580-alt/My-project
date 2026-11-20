@@ -1,0 +1,5 @@
+import {getSession,logout} from './auth.js';import {PAGE_TITLES} from './constants.js';import {toast} from './ui.js';
+const pages={};export function registerRoute(path,config){pages[path]=config;}
+export function navigate(path){location.hash=`/${path}`;}
+export function getCurrentRoute(){return (location.hash.replace(/^#\/?/,'')||'dashboard').split('/')[0];}
+export function startRouter(){const render=()=>{const route=getCurrentRoute(),session=getSession();if(!session){location.href='index.html';return;}const config=pages[route];if(!config){toast('هذه الشاشة غير متاحة حاليًا');location.hash='#/dashboard';return;}if(config.roles&&!config.roles.includes(session.role)){document.querySelector('#page-content').textContent='غير مصرح لك بالوصول إلى هذه الشاشة';return;}document.querySelector('#page-heading').textContent=PAGE_TITLES[route]||'المنصة';document.querySelectorAll('[data-route]').forEach(a=>a.classList.toggle('active',a.dataset.route===route));const root=document.querySelector('#page-content');root.replaceChildren();config.render(root,session);};window.addEventListener('hashchange',render);render();}
