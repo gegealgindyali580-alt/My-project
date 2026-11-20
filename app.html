@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:">
+  <meta name="theme-color" content="#142D4E">
+  <title>لوحة التحكم | مدرسة الحجر الثانوية</title>
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark small">ح</span><div><strong>مدرسة الحجر</strong><small>الثانوية</small></div></div>
+      <nav id="main-nav" aria-label="القائمة الرئيسية">
+        <a href="#/dashboard" data-route="dashboard">⌂ <span>الرئيسية</span></a>
+        <a href="#/students" data-route="students">♙ <span>الطلاب</span></a>
+        <a href="#/staff" data-route="staff">♧ <span>المعلمون والموظفون</span></a>
+        <a href="#/attendance" data-route="attendance">✓ <span>الحضور والغياب</span></a>
+        <a href="#/grades" data-route="grades">▤ <span>الدرجات والنتائج</span></a>
+        <a href="#/schedule" data-route="schedule">▦ <span>الجداول والحصص</span></a>
+        <a href="#/announcements" data-route="announcements">▣ <span>الإعلانات</span></a>
+        <a href="#/reports" data-route="reports">▥ <span>التقارير</span></a>
+        <a href="#/assistant" data-route="assistant">✧ <span>المساعد الذكي</span></a>
+        <a href="#/profile" data-route="profile">◉ <span>حسابي</span></a>
+        <a href="#/settings" data-route="settings">⚙ <span>الإعدادات</span></a>
+      </nav>
+      <div class="sidebar-foot">الإصدار 1.0 · نموذج محلي</div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-button mobile-only" aria-label="فتح القائمة">☰</button>
+        <div><span class="eyebrow">بوابة مدرسة الحجر الثانوية</span><h1 id="page-heading">الرئيسية</h1></div>
+        <div class="top-actions"><span id="current-date" class="muted"></span><button id="logout" class="btn btn-outline">خروج</button></div>
+      </header>
+      <section id="page-content" class="page-content" tabindex="-1"></section>
+    </main>
+  </div>
+  <button id="assistant-fab" class="assistant-fab" aria-label="فتح المساعد الذكي">✧</button>
+  <div id="toast-root" aria-live="polite"></div>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
