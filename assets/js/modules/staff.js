@@ -1,0 +1,1 @@
+import {el} from '../core/ui.js';export function render(root){root.append(el('div',{className:'card'},[el('h2',{text:'المعلمون والموظفون'}),el('p',{text:'هذه الوحدة لم تُستكمل بعد. راجع ملف PROGRESS.md قبل متابعة التنفيذ.'})]));}

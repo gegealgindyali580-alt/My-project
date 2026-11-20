@@ -1,0 +1,1 @@
+import {el} from '../core/ui.js';export function render(root,session){const c=el('div',{className:'card'});c.append(el('h2',{text:'حسابي'}),el('p',{text:`اسم المستخدم: ${session.username}`}),el('p',{text:`الدور: ${session.role==='admin'?'مدير':session.role==='teacher'?'معلم':'طالب'}`}));root.append(c);}

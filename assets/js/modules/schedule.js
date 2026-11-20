@@ -1,0 +1,1 @@
+import {el} from '../core/ui.js';export function render(root){root.append(el('div',{className:'card'},[el('h2',{text:'الجداول والحصص'}),el('p',{text:'وحدة عرض وبناء الجداول والتعارضات قيد التنفيذ.'})]));}
