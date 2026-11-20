@@ -1,0 +1,5 @@
+import {initStorage} from './core/storage.js';import {seedAdmin,login} from './core/auth.js';import {toast} from './core/ui.js';
+initStorage();const notice=document.querySelector('#seed-notice');const temp=await seedAdmin();if(temp){notice.classList.remove('hidden');notice.textContent=`تم إنشاء حساب المدير الأولي مرة واحدة. اسم المستخدم: admin — كلمة المرور المؤقتة: ${temp} . احتفظ بها الآن ثم غيّرها بعد الدخول.`;}
+document.querySelector('#toggle-password').addEventListener('click',()=>{const p=document.querySelector('#password');p.type=p.type==='password'?'text':'password';});
+document.querySelector('#forgot-password').addEventListener('click',()=>toast('يرجى مراجعة إدارة المدرسة لإعادة تعيين كلمة المرور.'));
+document.querySelector('#login-form').addEventListener('submit',async e=>{e.preventDefault();try{await login(document.querySelector('#username').value.trim(),document.querySelector('#password').value,document.querySelector('#remember').checked);location.href='app.html#/dashboard';}catch(err){toast(err.message);}});
